@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "topogate"
+version = "0.1.0"
+description = "Selective high-level terrain fusion for landslide segmentation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "torch",
+  "numpy",
+  "pillow",
+  "timm",
+  "transformers",
+  "safetensors",
+  "huggingface_hub",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["icassp_topogate*", "tools*"]
+namespaces = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

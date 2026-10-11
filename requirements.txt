@@ -1,0 +1,8 @@
+torch
+numpy
+pillow
+timm
+transformers
+safetensors
+huggingface_hub
+pytest
